@@ -1,8 +1,3 @@
- ĐƯA MP4 VÀO TRANG — CẬP NHẬT CODE
-
-Mình thêm nút Xem Video MP4 vào trang cho bạn luôn! Sửa file index.html như sau:
-
-Code hoàn chỉnh (có MP4 + MP3 + PDF + MuseScore):
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -17,13 +12,12 @@ Code hoàn chỉnh (có MP4 + MP3 + PDF + MuseScore):
     .search-bar { width: 100%; padding: 12px 15px; border: none; border-radius: 12px; background: #fff; font-size: 16px; margin-bottom: 20px; }
     .filters { display: flex; gap: 10px; margin-bottom: 25px; overflow-x: auto; padding-bottom: 5px; }
     .filter { padding: 8px 18px; border-radius: 20px; border: none; font-size: 15px; white-space: nowrap; cursor: pointer; background: #e5e5ea; }
-    .filter.active { background: #007aff; color: #fff; }
-    .song-card { background: #fff; border-radius: 16px; padding: 18px; margin-bottom: 15px; }
+    .filter.active { background: #007aff; color: #fff; }.song-card { background: #fff; border-radius: 16px; padding: 18px; margin-bottom: 15px; }
     .song-title { font-size: 18px; font-weight: 600; margin-bottom: 15px; }
     .tag { color: #8e8e93; font-weight: normal; font-size: 14px; }
     .part-row { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #f2f2f7; flex-wrap: wrap; gap: 8px; }
     .part-row:last-child { border-bottom: none; }
-    .part-name { font-size: 17px; font-weight: 500; color: #007aff; width: 80px; }
+    .part-name { font-size: 17px; font-weight: 500; color: #007aff; width: 100px; }
     .btn-group { display: flex; gap: 6px; flex-wrap: wrap; }
     .btn { padding: 8px 10px; border: none; border-radius: 8px; font-size: 13px; font-weight: 500; cursor: pointer; text-decoration: none; display: inline-block; }
     .btn-listen { background: #ff3b30; color: #fff; }
@@ -45,11 +39,11 @@ Code hoàn chỉnh (có MP4 + MP3 + PDF + MuseScore):
     <button class="filter active" data-filter="all">Tất cả</button>
     <button class="filter" data-filter="chung">Chung</button>
     <button class="filter" data-filter="cuoi-le">Cuối Lễ</button>
-<button class="filter" data-filter="cac-thanh">Các Thánh</button>
+    <button class="filter" data-filter="cac-thanh">Các Thánh</button>
   </div>
 
   <div id="songList">
-    <!-- Bài: Tựa Trầm Hương -->
+    <!-- Bài 1: Tựa Trầm Hương -->
     <div class="song-card" data-category="chung">
       <div class="song-title">Tựa Trầm Hương <span class="tag">• Tổng phổ</span></div>
       
@@ -57,7 +51,6 @@ Code hoàn chỉnh (có MP4 + MP3 + PDF + MuseScore):
         <span class="part-name">Trumpet</span>
         <div class="btn-group">
           <button class="btn btn-listen" onclick="playAudio('tua-tram-huong-trumpet.mp3')">▶ Nghe</button>
-          <button class="btn btn-video" onclick="playVideo('tua-tram-huong-trumpet.mp4')">🎬 Xem</button>
           <a class="btn btn-read" href="tua-tram-huong-trumpet.pdf" target="_blank">📄 Đọc</a>
           <a class="btn btn-muse" href="tua-tram-huong-trumpet.mscz" download>🎼 MuseScore</a>
         </div>
@@ -67,7 +60,6 @@ Code hoàn chỉnh (có MP4 + MP3 + PDF + MuseScore):
         <span class="part-name">Bass</span>
         <div class="btn-group">
           <button class="btn btn-listen" onclick="playAudio('tua-tram-huong-bass.mp3')">▶ Nghe</button>
-          <button class="btn btn-video" onclick="playVideo('tua-tram-huong-bass.mp4')">🎬 Xem</button>
           <a class="btn btn-read" href="tua-tram-huong-bass.pdf" target="_blank">📄 Đọc</a>
           <a class="btn btn-muse" href="tua-tram-huong-bass.mscz" download>🎼 MuseScore</a>
         </div>
@@ -76,8 +68,7 @@ Code hoàn chỉnh (có MP4 + MP3 + PDF + MuseScore):
       <div class="part-row">
         <span class="part-name">Sax</span>
         <div class="btn-group">
-          <button class="btn btn-listen" onclick="playAudio('tua-tram-huong-sax.mp3')">▶ Nghe</button>
-          <button class="btn btn-video" onclick="playVideo('tua-tram-huong-sax.mp4')">🎬 Xem</button>
+<button class="btn btn-listen" onclick="playAudio('tua-tram-huong-sax.mp3')">▶ Nghe</button>
           <a class="btn btn-read" href="tua-tram-huong-sax.pdf" target="_blank">📄 Đọc</a>
           <a class="btn btn-muse" href="tua-tram-huong-sax.mscz" download>🎼 MuseScore</a>
         </div>
@@ -87,46 +78,78 @@ Code hoàn chỉnh (có MP4 + MP3 + PDF + MuseScore):
         <span class="part-name">Trombone</span>
         <div class="btn-group">
           <button class="btn btn-listen" onclick="playAudio('tua-tram-huong-trombone.mp3')">▶ Nghe</button>
-          <button class="btn btn-video" onclick="playVideo('tua-tram-huong-trombone.mp4')">🎬 Xem</button>
           <a class="btn btn-read" href="tua-tram-huong-trombone.pdf" target="_blank">📄 Đọc</a>
           <a class="btn btn-muse" href="tua-tram-huong-trombone.mscz" download>🎼 MuseScore</a>
         </div>
       </div>
     </div>
+
+    <!-- Bài 2: Khúc Ca Tạ Ơn -->
+    <div class="song-card" data-category="chung">
+      <div class="song-title">Khúc Ca Tạ Ơn <span class="tag">• Tổng phổ</span></div>
+      
+      <div class="part-row">
+        <span class="part-name">Trumpet</span>
+        <div class="btn-group">
+          <button class="btn btn-listen" onclick="playAudio('khuc-ca-ta-on-trumpet.mp3')">▶ Nghe</button>
+          <a class="btn btn-read" href="khuc-ca-ta-on-trumpet.pdf" target="_blank">📄 Đọc</a>
+          <a class="btn btn-muse" href="khuc-ca-ta-on-trumpet.mscz" download>🎼 MuseScore</a>
+        </div>
+      </div>
+      
+      <div class="part-row">
+        <span class="part-name">Trombone</span>
+        <div class="btn-group">
+          <button class="btn btn-listen" onclick="playAudio('khuc-ca-ta-on-trombone.mp3')">▶ Nghe</button>
+          <a class="btn btn-read" href="khuc-ca-ta-on-trombone.pdf" target="_blank">📄 Đọc</a>
+          <a class="btn btn-muse" href="khuc-ca-ta-on-trombone.mscz" download>🎼 MuseScore</a>
+        </div>
+      </div>
+      
+      <div class="part-row">
+        <span class="part-name">Tuba</span>
+        <div class="btn-group">
+          <button class="btn btn-listen" onclick="playAudio('khuc-ca-ta-on-tuba.mp3')">▶ Nghe</button>
+          <a class="btn btn-read" href="khuc-ca-ta-on-tuba.pdf" target="_blank">📄 Đọc</a>
+          <a class="btn btn-muse" href="khuc-ca-ta-on-tuba.mscz" download>🎼 MuseScore</a>
+        </div>
+      </div>
+      
+      <div class="part-row">
+        <span class="part-name">Euphonium</span>
+        <div class="btn-group">
+          <button class="btn btn-listen" onclick="playAudio('khuc-ca-ta-on-euphonium.mp3')">▶ Nghe</button>
+          <a class="btn btn-read" href="khuc-ca-ta-on-euphonium.pdf" target="_blank">📄 Đọc</a>
+          <a class="btn btn-muse" href="khuc-ca-ta-on-euphonium.mscz" download>🎼 MuseScore</a>
+        </div>
+      </div>
+      
+      <div class="part-row">
+        <span class="part-name">Trống</span>
+        <div class="btn-group">
+          <button class="btn btn-listen" onclick="playAudio('khuc-ca-ta-on-trong.mp3')">▶ Nghe</button>
+<a class="btn btn-read" href="khuc-ca-ta-on-trong.pdf" target="_blank">📄 Đọc</a>
+          <a class="btn btn-muse" href="khuc-ca-ta-on-trong.mscz" download>🎼 MuseScore</a>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <!-- Thanh phát nhạc & video ở dưới -->
+  <!-- Thanh phát nhạc -->
   <div class="player-bar" id="playerBar">
     <strong id="tenDangPhat">Đang phát...</strong>
-    <audio controls id="audioPlayer" style="display:block;">
-    <video controls id="videoPlayer" style="display:none;"></video>
+    <audio controls id="audioPlayer">
   </div>
 
 <script>
 const playerBar = document.getElementById('playerBar');
 const tenDangPhat = document.getElementById('tenDangPhat');
 const audioPlayer = document.getElementById('audioPlayer');
-const videoPlayer = document.getElementById('videoPlayer');
 
-// Phát nhạc
 function playAudio(url) {
-  videoPlayer.style.display = 'none';
-  videoPlayer.pause();
-  audioPlayer.style.display = 'block';
   audioPlayer.src = url;
   audioPlayer.play();
   tenDangPhat.textContent = '▶ Đang nghe: ' + url.split('/').pop().replace('.mp3','');
-  playerBar.classList.add('show');
-}
-
-// Phát video MP4
-function playVideo(url) {
-  audioPlayer.style.display = 'none';
-  audioPlayer.pause();
-  videoPlayer.style.display = 'block';
-  videoPlayer.src = url;
-  videoPlayer.play();
-  tenDangPhat.textContent = '🎬 Đang xem: ' + url.split('/').pop().replace('.mp4','');
   playerBar.classList.add('show');
 }
 
